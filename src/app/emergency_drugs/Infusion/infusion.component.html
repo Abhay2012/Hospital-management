@@ -1,0 +1,504 @@
+<div class="container-fluid">
+    <h3><b>OPIATES/SEDATIVE</b></h3>
+    <div class="card">
+    <table class="table table-striped">
+      <thead>
+        <tr style="background-color:#97b714; font-weight:600; color:#fff;">
+          <td>Drug Solution</td>
+          <td>ml of Drug solution</td>
+          <td>Concentration</td>
+          <td>Total drug (mg) in syringe</td>
+          <td>Fluid</td>
+          <td>Total Volume (ml)</td>
+          <td>Dose Range</td>
+          <td>Infusion range/rate range in ml/hr</td>
+          <td>Doctors Signature</td>
+          <td>Batch Number</td>
+          <td>Added/ Checked</td>
+          <td>Start time</td>
+          <td>Finish Time</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="default">
+          <td>Morphine 10mg/ml</td>
+          <!--conditions  -->
+          <td *ngIf="data.Rweight < 50">{{data.Rweight/10}}</td>
+          <td *ngIf="data.Rweight >= 50">5</td>
+          <!--condition 1 end  -->
+          <td>1mg/kg (max 50mg)</td>
+          <!--condition2  -->
+          <td *ngIf="data.Rweight < 50">{{data.Rweight*1}}</td>
+          <td *ngIf="data.Rweight >= 50">50</td>
+          <!--condition2 end  -->
+          <td>5% Glucose or Nacl 0.9%</td>
+          <td>50</td>
+          <td>20 - 80 microgram/kg/hr</td>
+          <td>1ml/hr = 20 microgram/kg/hr</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr class="default">
+          <td>Midazolam 15mg/3ml</td>
+          <!--condition1  -->
+          <td *ngIf="data.Rweight < 40">{{((data.Rweight*6)/5) | number : '1.2-2'}}</td>
+          <td *ngIf="data.Rweight >= 40">{{((data.Rweight*3)/5)| number : '1.2-2'}}</td>
+          <!--condition1 end  -->
+          <td>40kg: 6mg/kg >40kg: 3mg/kg</td>
+          <!--condition2  -->
+          <td *ngIf="data.Rweight < 40">{{data.Rweight*6}}</td>
+          <td *ngIf="data.Rweight >= 40">{{data.Rweight*3}}</td>
+          <!--conditon2 end  -->
+          <td>5% Glucose or Nacl 0.9%</td>
+          <td>50 ml</td>
+          <td>120-360 microgram/kg/hour </td>
+          <td>1ml/hr = 60 microgram/kg/hour<br>2ml/hr = 120 microgram/kg/hour</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr class="default">
+          <td>Fentanyl 100mcg/2ml</td>
+          <!--condition 1  -->
+          <td>{{((data.Rweight*0.125)*1000/50) | number : '1.2-2'}}</td>
+          <!--condition 1 end  -->
+          <td></td>
+          <!--condition 2  -->
+          <td>{{(data.Rweight*0.125) | number : '1.2-2'}}</td>
+          <!--condition 2 end  -->
+          <td>5% Glucose or Nacl 0.9%</td>
+          <td>50 ml</td>
+          <td>1-5 microgram/kg/hour</td>
+          <td>1ml/hr = 2.5 microgram/kg/hr</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr class="default">
+          <td>Ketamine 10mg/ml</td>
+          <td>5</td>
+          <td>50 mg in 50 mls Glu 5% or NaCl 0.9%</td>
+          <td>50</td>
+          <td>50 mg in 50 mls Glu 5% or NaCl 0.9%</td>
+          <td>50 ml</td>
+          <td>10 - 45 microgram/kg/min </td>
+          <td>0.6 ml/kg/hr = 10 microgram/kg/min</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+
+
+        <tr class="default">
+          <td>Clonidine</td>
+          <td></td>
+          <td></td>
+          <!--condition -->
+          <td>{{(data.Rweight*0.025) | number : '1.2-2'}}</td>
+          <!--condion end   -->
+          <td>5% Glucose</td>
+          <td>50 ml</td>
+          <td>0.5-2 microgram/kg/hr</td>
+          <td>1ml/hr = 0.5 microgram/kg/hr</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+  <!-- end of containr2  -->
+
+  <!--container 3 -->
+  <!--table2 -->
+
+  <div class="container-fluid">
+    <h3><b>MUSCLE RELAXANTS</b></h3>
+    <div class="card">
+    <table class="table table-striped">
+      <thead>
+        <tr style="background-color:#97b714; font-weight:600; color:#fff;">
+          <td>Drug</td>
+          <td>ml of Drug solution</td>
+          <td>Concentration</td>
+          <td>Total drug (mg) in syringe</td>
+          <td>Fluid</td>
+          <td>Total Volume (ml)</td>
+          <td>Dose Range</td>
+          <td>Dose range/rate range in ml/hr</td>
+          <td>Doctors Signature</td>
+          <td>Batch Number</td>
+          <td>Added/ Checked</td>
+          <td>Start time</td>
+          <td>Finish Time</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="default">
+          <td>Atracurium 500mg/5ml</td>
+          <td>2.5</td>
+          <td></td>
+          <td>250</td>
+          <td>0.9% Saline or 5% Dextrose</td>
+          <td>25 ml</td>
+          <td>0.5 - 1 mg/kg/hr</td>
+          <td>0.05 ml/kg/hr = 0.5mg/kg/hour</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr class="default">
+          <td>Atracurium 500mg/5ml</td>
+          <td>2.5</td>
+          <td></td>
+          <td>250</td>
+          <td>0.9% Saline or 5% Dextrose</td>
+          <td>50 ml</td>
+          <td>0.5 - 1 mg/kg/hr</td>
+          <td>0.05 ml/kg/hr = 0.5mg/kg/hour</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr class="default">
+          <td colspan="13">Rocuronium</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+  </div>
+  <!--table 2 end -->
+  <!--Container 3 end  -->
+
+
+  <!--container 4 -->
+  <!--table3 -->
+
+  <div class="container-fluid">
+    <h3><b>VASOACTIVE MEDICATION</b></h3>
+    <div class="card">
+    <table class="table table-striped">
+      <thead>
+        <tr style="background-color:#97b714; font-weight:600; color:#fff;">
+          <td>Drug</td>
+          <td>ml of Drug solution</td>
+          <td>Concentration</td>
+          <td>Total drug (mg) in syringe</td>
+          <td>Fluid</td>
+          <td>Total Volume (ml)</td>
+          <td>Dose Range</td>
+          <td>Dose range/rate range in ml/hr</td>
+          <td>Doctors Signature</td>
+          <td>Batch Number</td>
+          <td>Added/ Checked</td>
+          <td>Start time</td>
+          <td>Finish Time</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="default">
+          <td>Epinephrine <b>Central Unless In Extreme circumstances</b></td>
+          <td></td>
+          <td></td>
+          <!--condition  -->
+          <td>{{(data.Rweight*0.3) | number : '1.2-2'}}</td>
+          <!--condition  -->
+          <td>5% Dextrose</td>
+          <td>50 ml</td>
+          <td> 0.1-1 microgram/kg/min</td>
+          <td>1ml/hr = 0.1 microgram/kg/min</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr class="default">
+          <td>Norepinephrine <b> Central Line</b></td>
+          <td></td>
+          <td></td>
+          <!--condition-->
+          <td>{{(data.Rweight*0.3) | number : '1.2-2'}}</td>
+          <!--condition end  -->
+          <td>5% Dextrose</td>
+          <td>50 ml</td>
+          <td> 0.1-1 microgram/kg/min</td>
+          <td>1ml/hr = 0.1 microgram/kg/min</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr class="default">
+          <td>Dopamine <b>Peripheral</b></td>
+          <td></td>
+          <td>
+            <10 kg: 6mg/kg</td>
+              <!--condition-->
+              <td>{{(data.Rweight*6) | number : '1.2-2'}}</td>
+              <!--condition end  -->
+              <td>5% Dextrose</td>
+              <td>50 ml</td>
+              <td>1ml/hr = 2 microgram/kg/min</td>
+              <td>1.0-2.0ml/hr</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+        </tr>
+
+        <tr class="default">
+          <td>Dopamine Peripheral</td>
+          <td></td>
+          <td>> 10 kg: 3mg/kg</td>
+          <!--condition-->
+          <td>{{(data.Rweight*3) | number : '1.2-2'}}</td>
+          <!--condition end  -->
+          <td>5% Dextrose</td>
+          <td>50 ml</td>
+          <td>1ml/hr = 1 microgram/kg/min</td>
+          <td>1.0-2.0ml/hr</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+
+        <tr class="default">
+          <td>Dopamine <b>Central Line</b></td>
+          <td></td>
+          <td></td>
+          <!--condition-->
+          <td>{{(data.Rweight*15) | number : '1.2-2'}}</td>
+          <!--condition end  -->
+          <td>5% Dextrose</td>
+          <td>50 ml</td>
+          <td>1ml/hr = 5 microgram/kg/min</td>
+          <td>1.0-2.0ml/hr</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr class="default">
+          <td>Dobutamine <b>Peripheral Line</b></td>
+          <td></td>
+          <td>
+            < 10 kg: 6mg/kg</td>
+              <!--condition-->
+              <td>{{(data.Rweight*6) | number : '1.2-2'}}</td>
+              <!--condition end  -->
+              <td>5% Dextrose</td>
+              <td>50 ml</td>
+              <td>1ml/hr = 2 microgram/kg/min</td>
+              <td>1.0-2.0ml/hr</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+        </tr>
+
+        <tr class="default">
+          <td>Dobutamine <b>Peripheral Line</b></td>
+          <td></td>
+          <td> > 10 kg: 3mg/kg</td>
+          <!--condition-->
+          <td>{{(data.Rweight*3) | number : '1.2-2'}}</td>
+          <!--condition end  -->
+          <td>5% Dextrose</td>
+          <td>50 ml</td>
+          <td>1ml/hr = 1 microgram/kg/min</td>
+          <td>1.0-2.0ml/hr</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr class="default">
+          <td>Dobutamine <b>Central Line</b></td>
+          <td></td>
+          <td></td>
+          <!--condition-->
+          <td>{{(data.Rweight*15) | number : '1.2-2'}}</td>
+          <!--condition end  -->
+          <td>5% Dextrose</td>
+          <td>50 ml</td>
+          <td>1ml/hr = 5 microgram/kg/min</td>
+          <td>1.0-2.0ml/hr</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr class="default">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  <!--table 3 end -->
+  <!--Container 4 end  -->
+
+
+  <!--container 5  -->
+  <!--table 4  -->
+  <div class="container-fluid">
+    <h3><b>Asthma MEDICATION</b></h3>
+    <div class="card">
+    <table class="table table-striped">
+      <thead>
+        <tr style="background-color:#97b714; font-weight:600; color:#fff;">
+          <td>Drug</td>
+          <td>ml of Drug solution</td>
+          <td>Concentration</td>
+          <td>Total drug (mg) in syringe</td>
+          <td>Fluid</td>
+          <td>Total Volume (ml)</td>
+          <td>Dose Range</td>
+          <td>Dose range/rate range in ml/hr</td>
+          <td>Doctors Signature</td>
+          <td>Batch Number</td>
+          <td>Added/ Checked</td>
+          <td>Start time</td>
+          <td>Finish Time</td>
+
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="default">
+          <td>Salbutamol 2.5 mg/2.5 ml</td>
+          <td>10</td>
+          <td>Diluted</td>
+          <td>10mg in 50mls total 5% Dextrose or 0.9% Saline</td>
+          <td>50</td>
+          <td>1-5 microgram/kg/min for 1 hour </td>
+          <td>Wt (kg) x 0.3 as ml/hr = 1microgram/kg/min</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+
+        <tr class="default">
+          <td>Salbutamol 2.5 mg/2.5 ml Central</td>
+          <td>50</td>
+          <td>Neat</td>
+          <td>50</td>
+          <td>Neat</td>
+          <td>50</td>
+          <td>5-10 microgram/kg/min for 1 hour then 1-2 microgram/kg/min</td>
+          <td>0.3-0.6 ml/kg/hr for 1 hour then 0.06-0.12 ml/kg/hr</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+
+        <tr class="default">
+          <td>Aminophylline 25mg/ml Loading Dose</td>
+          <td>2</td>
+          <td></td>
+          <td>50</td>
+          <td>5% Dextrose</td>
+          <td>50</td>
+          <td>5 mg/kg (max 500mg) FIRST HOUR ONLY</td>
+          <td>1ml/kg/hr = 1mg/kg/hr</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+
+        <tr class="default">
+          <td>Aminophylline 25mg/ml Maintenance</td>
+          <td>2</td>
+          <td></td>
+          <td>50</td>
+          <td>5% Dextrose</td>
+          <td>50</td>
+          <td>1mg/kg/hr</td>
+          <td>1ml/kg/hr = 1mg/kg/hr</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+
+        <tr class="default">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Ketamine</td>
+          <td>See</td>
+          <td>Above</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table> 
+  </div>
+  </div>

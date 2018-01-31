@@ -1,0 +1,22 @@
+#div_1{
+    background-color: #97b714;
+}
+#h2_1{
+    font-weight: 700;
+    color: white;
+}
+#h6_1{
+    color:#fff;
+    font-weight:600;
+}
+
+.footer{
+    color:#fff;
+    padding:50px;
+    background-color: #97b714;    
+}
+#footer{
+    color:#fff;
+    font-weight:700;
+    text-align: left;
+}
