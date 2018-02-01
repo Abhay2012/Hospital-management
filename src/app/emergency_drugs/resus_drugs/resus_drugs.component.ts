@@ -12,7 +12,7 @@ export class ResusDrugsComponent implements OnInit{
     local;
     ngOnInit(){
         this.local = localStorage;
-        this.roundWt = localStorage.getItem('roundWeight');
+        this.roundWt = parseInt(localStorage.getItem('roundWeight'));
         this.data['Epinephrine'] = this.roundWt*10;
         this.data['Adrenaline'] = this.roundWt*100;
         this.data['Sodium'] = this.roundWt*1;

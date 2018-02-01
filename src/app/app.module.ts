@@ -17,6 +17,10 @@ import { RouterModule } from '@angular/router';
       {
         path : 'emergency_drugs',
         loadChildren : 'app/emergency_drugs/emergency_drugs.module#EmergencyDrugsModule',
+      },
+      {
+        path : 'fluids',
+        loadChildren : 'app/fluids/fluids.module#FluidsModule',
       }
     ])
   ],

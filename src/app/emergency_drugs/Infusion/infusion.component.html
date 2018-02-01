@@ -23,13 +23,13 @@
         <tr class="default">
           <td>Morphine 10mg/ml</td>
           <!--conditions  -->
-          <td *ngIf="data.Rweight < 50">{{data.Rweight/10}}</td>
-          <td *ngIf="data.Rweight >= 50">5</td>
+          <td *ngIf="roundWt < 50">{{roundWt/10}}</td>
+          <td *ngIf="roundWt >= 50">5</td>
           <!--condition 1 end  -->
           <td>1mg/kg (max 50mg)</td>
           <!--condition2  -->
-          <td *ngIf="data.Rweight < 50">{{data.Rweight*1}}</td>
-          <td *ngIf="data.Rweight >= 50">50</td>
+          <td *ngIf="roundWt < 50">{{roundWt}}</td>
+          <td *ngIf="roundWt >= 50">50</td>
           <!--condition2 end  -->
           <td>5% Glucose or Nacl 0.9%</td>
           <td>50</td>
@@ -45,13 +45,13 @@
         <tr class="default">
           <td>Midazolam 15mg/3ml</td>
           <!--condition1  -->
-          <td *ngIf="data.Rweight < 40">{{((data.Rweight*6)/5) | number : '1.2-2'}}</td>
-          <td *ngIf="data.Rweight >= 40">{{((data.Rweight*3)/5)| number : '1.2-2'}}</td>
+          <td *ngIf="roundWt < 40">{{((roundWt*6)/5) | number : '1.2-2'}}</td>
+          <td *ngIf="roundWt >= 40">{{((roundWt*3)/5)| number : '1.2-2'}}</td>
           <!--condition1 end  -->
           <td>40kg: 6mg/kg >40kg: 3mg/kg</td>
           <!--condition2  -->
-          <td *ngIf="data.Rweight < 40">{{data.Rweight*6}}</td>
-          <td *ngIf="data.Rweight >= 40">{{data.Rweight*3}}</td>
+          <td *ngIf="roundWt < 40">{{roundWt*6}}</td>
+          <td *ngIf="roundWt >= 40">{{roundWt*3}}</td>
           <!--conditon2 end  -->
           <td>5% Glucose or Nacl 0.9%</td>
           <td>50 ml</td>
@@ -67,11 +67,11 @@
         <tr class="default">
           <td>Fentanyl 100mcg/2ml</td>
           <!--condition 1  -->
-          <td>{{((data.Rweight*0.125)*1000/50) | number : '1.2-2'}}</td>
+          <td>{{((data['Fentanyl'])*1000/50) | number : '1.2-2'}}</td>
           <!--condition 1 end  -->
           <td></td>
           <!--condition 2  -->
-          <td>{{(data.Rweight*0.125) | number : '1.2-2'}}</td>
+          <td>{{(data['Fentanyl']) | number : '1.2-2'}}</td>
           <!--condition 2 end  -->
           <td>5% Glucose or Nacl 0.9%</td>
           <td>50 ml</td>
@@ -107,7 +107,7 @@
           <td></td>
           <td></td>
           <!--condition -->
-          <td>{{(data.Rweight*0.025) | number : '1.2-2'}}</td>
+          <td>{{(roundWt*0.025) | number : '1.2-2'}}</td>
           <!--condion end   -->
           <td>5% Glucose</td>
           <td>50 ml</td>
@@ -224,7 +224,7 @@
           <td></td>
           <td></td>
           <!--condition  -->
-          <td>{{(data.Rweight*0.3) | number : '1.2-2'}}</td>
+          <td>{{(roundWt*0.3) | number : '1.2-2'}}</td>
           <!--condition  -->
           <td>5% Dextrose</td>
           <td>50 ml</td>
@@ -242,7 +242,7 @@
           <td></td>
           <td></td>
           <!--condition-->
-          <td>{{(data.Rweight*0.3) | number : '1.2-2'}}</td>
+          <td>{{(roundWt*0.3) | number : '1.2-2'}}</td>
           <!--condition end  -->
           <td>5% Dextrose</td>
           <td>50 ml</td>
@@ -261,7 +261,7 @@
           <td>
             <10 kg: 6mg/kg</td>
               <!--condition-->
-              <td>{{(data.Rweight*6) | number : '1.2-2'}}</td>
+              <td>{{(roundWt*6) | number : '1.2-2'}}</td>
               <!--condition end  -->
               <td>5% Dextrose</td>
               <td>50 ml</td>
@@ -279,7 +279,7 @@
           <td></td>
           <td>> 10 kg: 3mg/kg</td>
           <!--condition-->
-          <td>{{(data.Rweight*3) | number : '1.2-2'}}</td>
+          <td>{{(roundWt*3) | number : '1.2-2'}}</td>
           <!--condition end  -->
           <td>5% Dextrose</td>
           <td>50 ml</td>
@@ -298,7 +298,7 @@
           <td></td>
           <td></td>
           <!--condition-->
-          <td>{{(data.Rweight*15) | number : '1.2-2'}}</td>
+          <td>{{(roundWt*15) | number : '1.2-2'}}</td>
           <!--condition end  -->
           <td>5% Dextrose</td>
           <td>50 ml</td>
@@ -317,7 +317,7 @@
           <td>
             < 10 kg: 6mg/kg</td>
               <!--condition-->
-              <td>{{(data.Rweight*6) | number : '1.2-2'}}</td>
+              <td>{{(roundWt*6) | number : '1.2-2'}}</td>
               <!--condition end  -->
               <td>5% Dextrose</td>
               <td>50 ml</td>
@@ -335,7 +335,7 @@
           <td></td>
           <td> > 10 kg: 3mg/kg</td>
           <!--condition-->
-          <td>{{(data.Rweight*3) | number : '1.2-2'}}</td>
+          <td>{{(roundWt*3) | number : '1.2-2'}}</td>
           <!--condition end  -->
           <td>5% Dextrose</td>
           <td>50 ml</td>
@@ -353,7 +353,7 @@
           <td></td>
           <td></td>
           <!--condition-->
-          <td>{{(data.Rweight*15) | number : '1.2-2'}}</td>
+          <td>{{(roundWt*15) | number : '1.2-2'}}</td>
           <!--condition end  -->
           <td>5% Dextrose</td>
           <td>50 ml</td>
