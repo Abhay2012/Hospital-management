@@ -83,7 +83,10 @@ export class ArrythmiasComponent implements OnInit {
         this.data['epinephrine'] = parseInt(this.local.roundWeight)*0.01;
         this.data['adenosine100'] = parseInt(this.local.roundWeight)*0.1<3 ? (parseInt(this.local.roundWeight)*0.1).toFixed(2) : 3;
         this.data['adenosine200'] = parseInt(this.local.roundWeight)*0.1<6 ? (parseInt(this.local.roundWeight)*0.2).toFixed(2) : 6;
-        
+        this.data['doseToGiven'] = {
+            epinephrine : parseInt(this.local.roundWeight)*10,
+            amiodarone : parseInt(this.local.roundWeight)*5 < 301 ? 5*parseInt(this.local.roundWeight) : 300
+        }
         
         
         let content = `st=>operation: DC SHOCK 4 J/KG\n${this.data['dcshock']}  Estimated Joules|past\n\

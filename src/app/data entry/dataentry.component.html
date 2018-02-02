@@ -26,7 +26,7 @@
                 <b> Enter Patient Name : </b>
             </td>
             <td>
-                <input type="text" name="patientName"  ngModel class="form-control">
+                <input type="text" name="patientName"  [(ngModel)]="local.patientName" class="form-control">
             </td>
         </tr>
         <tr>
@@ -34,7 +34,7 @@
                 <b> Date Of Birth : </b>
             </td>
             <td>
-                <input type="date" class="form-control" name="patientDOB" ngModel>
+                <input type="date" class="form-control" name="patientDOB" [(ngModel)]="local.patientDOB">
             </td>
         </tr>
         <tr>
@@ -42,7 +42,7 @@
                 <b> Hospital Number : </b>
             </td>
             <td>
-                <input type="number" class="form-control" name="hospitalNo" ngModel>
+                <input type="number" class="form-control" name="hospitalNo"  [(ngModel)]="local.hospitalNo">
             </td>
         </tr>
         <tr>
@@ -50,7 +50,7 @@
                 <b> Ward : </b>
             </td>
             <td>
-                <input type="text" class="form-control" name="ward" ngModel>
+                <input type="text" class="form-control" name="ward" [(ngModel)]="local.ward">
             </td>
         </tr>
         <tr>
@@ -58,7 +58,7 @@
                 <b> Patient Weight (in Kg) : </b>
             </td>
             <td>
-                <input type="number" class="form-control" required name="patientWeight" ngModel>
+                <input type="number" class="form-control" required name="patientWeight" [(ngModel)]="local.patientWeight">
             </td>
         </tr>
         <tr>
@@ -66,7 +66,7 @@
                 <b> Patient Age : </b>
             </td>
             <td>
-                <input type="number" class="form-control"  name="patientAge" ngModel>
+                <input type="number" class="form-control"  required name="patientAge" [(ngModel)]="local.patientAge">
             </td>
         </tr>
         <tr>
@@ -74,13 +74,14 @@
                 <b> Prescriber Name : </b>
             </td>
             <td>
-                <input type="text" class="form-control" name="prescriber" ngModel>
+                <input type="text" class="form-control" name="prescriber" [(ngModel)]="local.prescriber">
             </td>
         </tr>
         <br>
         <tfoot>
             <td></td>
             <button style="float:right" class="btn btn-primary" [disabled]="entryForm.invalid" (click)="dataEntered(entryForm)">Submit</button>
+            <button style="float:right;margin-right:10px" class="btn btn-primary" (click)="clearData()">Clear</button>
         </tfoot>
     </table>
 </form>

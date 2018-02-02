@@ -22,5 +22,10 @@ export class FluidsComponent{
         for(let ml of this.mls){
             this.totalMls += ml;
         }
+        this.data['ETT'] = {
+            size : (parseInt(this.local.patientAge)/4)+4,
+            oral : (parseInt(this.local.patientAge)/2)+12,
+            nasal : (parseInt(this.local.patientAge)/2)+15
+        }
     }
 }

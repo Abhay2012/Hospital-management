@@ -21,5 +21,10 @@ export class IntubationComponent implements OnInit{
         this.data['Propofol'] = this.roundWt*2.5;
         this.data['Suxamethonium'] = this.roundWt*2;
         this.data['Atracurium'] = this.roundWt*0.5;
+        this.data['ETT'] = {
+            size : (parseInt(this.local.patientAge)/4)+4,
+            oral : (parseInt(this.local.patientAge)/2)+12,
+            nasal : (parseInt(this.local.patientAge)/2)+15
+        }
     }
 }

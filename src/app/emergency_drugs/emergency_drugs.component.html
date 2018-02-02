@@ -1,10 +1,12 @@
 <div id="div_2">
-    <ul class="nav nav-tabs">
-        <li routerLinkActive="active"><a routerLink="">Home</a></li>
+    <ul class="nav nav-tabs" id="nav-bar">
+        <li><a routerLink="">Home</a></li>
         <li routerLinkActive="active"><a routerLink="/emergency_drugs/resus_drugs">Resus Drug</a></li>
         <li routerLinkActive="active"><a routerLink="/emergency_drugs/intubation">Intubation</a></li>
         <li routerLinkActive="active"><a routerLink="/emergency_drugs/infusion">Infusion</a></li>
         <li routerLinkActive="active"><a routerLink="/emergency_drugs/arrythmias">Arrythmias</a></li>
+        <li (click)="print()"><a>Print</a></li>
+        <li (click)="print1()"><a>Print1</a></li>
     </ul>
 </div>
 <patient_details></patient_details>  

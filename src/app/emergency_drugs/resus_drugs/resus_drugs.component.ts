@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
     selector : 'resus_drugs',
     templateUrl : 'resus_drugs.component.html',
@@ -24,5 +25,8 @@ export class ResusDrugsComponent implements OnInit{
         this.data['Amiodarone'] = this.roundWt*5;
         this.data['Dextrose'] = this.roundWt*5;
     }
+
+
+    
     
 }

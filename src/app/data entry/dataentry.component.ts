@@ -8,8 +8,9 @@ import { Router } from "@angular/router";
 })
 export class DataEntryComponent{
     tab:number = 1;
+    local;
     constructor(private router : Router){
-
+        this.local = localStorage;
     }
 
     dataEntered(entryForm){
@@ -26,5 +27,9 @@ export class DataEntryComponent{
             this.router.navigate(['fluids']);
         }
 
+    }
+
+    clearData(){
+        localStorage.clear();
     }
 }
