@@ -20,6 +20,8 @@ export class DataEntryComponent{
         localStorage.setItem('roundWeight', (Math.round(entryForm.value.patientWeight)).toString());
         if(this.tab == 1){
             this.router.navigate(['emergency_drugs']);
+        }else if(this.tab == 2){
+            this.router.navigate(['dka']);
         }else if(this.tab == 3){
             this.router.navigate(['fluids']);
         }

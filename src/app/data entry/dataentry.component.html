@@ -26,7 +26,7 @@
                 <b> Enter Patient Name : </b>
             </td>
             <td>
-                <input type="text" name="patientName" required ngModel class="form-control">
+                <input type="text" name="patientName"  ngModel class="form-control">
             </td>
         </tr>
         <tr>
@@ -80,7 +80,7 @@
         <br>
         <tfoot>
             <td></td>
-            <button style="float:right" class="btn btn-primary" (click)="dataEntered(entryForm)">Submit</button>
+            <button style="float:right" class="btn btn-primary" [disabled]="entryForm.invalid" (click)="dataEntered(entryForm)">Submit</button>
         </tfoot>
     </table>
 </form>

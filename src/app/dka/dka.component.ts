@@ -1,10 +1,10 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-    selector : 'fluids',
-    templateUrl : 'fluids.component.html'
+    selector : 'dka',
+    templateUrl : 'dka.component.html'
 })
-export class FluidsComponent{
+export class DkaComponent{
     local;
     roundWt;
     data={};

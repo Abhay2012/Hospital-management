@@ -1,20 +1,22 @@
 import { NgModule } from '@angular/core';
-import { FluidsComponent } from './fluids.component';
+import { DkaComponent } from './dka.component';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from "@angular/common";
 import { PatientDetailsModule } from '../patient_details/patient_details.module';
 
 @NgModule({
-    imports : [ CommonModule,
+    imports : [
+        CommonModule,
         PatientDetailsModule,
         RouterModule.forChild([
-        {
-            path : '',
-            component : FluidsComponent
-        }
-    ]) ],
-    declarations : [ FluidsComponent ]
+            {
+                path : '',
+                component : DkaComponent
+            }
+        ])
+    ],
+    declarations : [DkaComponent]
 })
-export class FluidsModule{
+export class DkaModule{
 
 }

@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router"
 import { EmergencyDrugsComponent } from './emergency_drugs.component';
-import { PatientDetailsComponent } from '../patient_details/patient_details.component';
+import { PatientDetailsModule } from '../patient_details/patient_details.module';
 
 @NgModule({
     imports : [
@@ -26,12 +26,17 @@ import { PatientDetailsComponent } from '../patient_details/patient_details.comp
                     {
                         path : 'infusion',
                         loadChildren : 'app/emergency_drugs/Infusion/infusion.module#InfusionModule'
+                    },
+                    {
+                        path : 'arrythmias',
+                        loadChildren : 'app/emergency_drugs/arrythmias/arrythmias.module#ArrythmiasModule'
                     }
                 ]
             }
-        ])
+        ]),
+        PatientDetailsModule
     ],
-    declarations : [EmergencyDrugsComponent, PatientDetailsComponent]
+    declarations : [EmergencyDrugsComponent ]
 })
 export class EmergencyDrugsModule{
 

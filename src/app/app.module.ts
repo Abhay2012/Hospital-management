@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent  
   ],
   imports: [
     BrowserModule,
@@ -21,6 +21,10 @@ import { RouterModule } from '@angular/router';
       {
         path : 'fluids',
         loadChildren : 'app/fluids/fluids.module#FluidsModule',
+      },
+      {
+        path : 'dka',
+        loadChildren : 'app/dka/dka.module#DkaModule',
       }
     ])
   ],
