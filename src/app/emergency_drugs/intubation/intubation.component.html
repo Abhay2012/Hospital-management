@@ -1,19 +1,20 @@
 <div class="jumbotron">
   <div class="container">
     <div class="row">
+        <h3 style="font-weight:600; margin-left:20px;color:#718800">Information</h3>
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
         <div id="details">
-          ETT SIZE : {{data.ETT.size}}
+          ETT SIZE : {{data['ETT']['size']}}
         </div>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
         <div id="details">
-          ETT ORAL LENGTH :{{data.ETT.oral}}
+          ETT ORAL LENGTH :{{data['ETT']['oral']}}
         </div>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
         <div id="details">
-          ETT NASAL LENGTH : {{data.ETT.nasal}}
+          ETT NASAL LENGTH : {{data['ETT']['nasal']}}
         </div>
       </div>
     </div>
@@ -35,9 +36,9 @@
 </div>
 
 
-<div class="container">
+<div class="container-fluid">
   <div class="card">
-    <table class="table table-striped">
+    <table class="table table-bordered">
       <thead>
         <tr style="background-color:#97b714; font-weight:600; color:#fff;">
           <td>Drug & Presentation </td>
@@ -63,13 +64,10 @@
           <td>100mcg/ml [Dilute to 6ml with 0.9% saline]</td>
 
           <!-- conditions 1 -->
-          <td *ngIf="data['Atropine'] >= 0.1 && data['Atropine'] <= 0.6">{{(data['Atropine']) | number : '1.2-2'}} mg</td>
-          <td *ngIf="data['Atropine'] > 0.6">0.06</td>
-          <td *ngIf="data['Atropine'] < 0.1">0.1</td>
+          <td>{{(data['Atropine']) | number : '1.2-2'}} mg</td>
+          
           <!--condition 2  -->
-          <td *ngIf="data['Atropine'] >= 0.1 && data['Atropine'] <= 0.6">{{(data['Atropine']*10) | number : '1.2-2'}} mg</td>
-          <td *ngIf="data['Atropine'] > 0.6">{{0.06*10}}</td>
-          <td *ngIf="data['Atropine'] < 0.1">{{0.1*10}}</td>
+          <td>{{(data['Atropine']*10) | number : '1.2-2'}} mg</td>
           <!--end of conditions   -->
           <td>IV</td>
           <td>{{local.prescriber}}</td>
@@ -88,24 +86,24 @@
           <td>
             <h6>First dose - repeat if necessary
               <br>
-              <b *ngIf="data['Morphine'] < 10">{{(data['Morphine']) | number : '1.2-2'}} mg</b>
-              <b *ngIf="data['Morphine'] >= 10">10 mg</b>
+              <b>{{(data['Morphine']) | number : '1.2-2'}} mg</b>
+              
               <hr>Second dose - must be signed for
               <br>
-              <b *ngIf="data['Morphine'] < 10">{{(data['Morphine']) | number : '1.2-2'}} mg</b>
-              <b *ngIf="data['Morphine'] >= 10">10 mg</b>
+              <b>{{(data['Morphine']) | number : '1.2-2'}} mg</b>
+              
             </h6>
           </td>
 
           <td>
             <h6>First dose - repeat if necessary
               <br>
-              <b *ngIf="data['Morphine'] < 10">{{(data['Morphine']) | number : '1.2-2'}} mg</b>
-              <b *ngIf="data['Morphine'] >= 10">10 mg</b>
+              <b>{{(data['Morphine']) | number : '1.2-2'}} mg</b>
+              
               <hr>Second dose - must be signed for
               <br>
-              <b *ngIf="data['Morphine'] < 10">{{(data['Morphine']) | number : '1.2-2'}} mg</b>
-              <b *ngIf="data['Morphine'] >= 10">10 mg</b>
+              <b>{{(data['Morphine']) | number : '1.2-2'}} mg</b>
+              
             </h6>
           </td>
           <!--end of conditions  -->
@@ -118,7 +116,7 @@
               <b>IV</b>
             </h6>
           </td>
-          <td>{{data.prescriber}}</td>
+          <td>{{local.prescriber}}</td>
           <td></td>
           <td></td>
         </tr>
@@ -139,7 +137,7 @@
               <b>{{(data['Fentanyl']) | number : '1.2-2'}} mg</b>
               <hr>Second dose - must be signed for
               <br>
-              <b>{{data.weight*0.002}} mg</b>
+              <b>{{data['Fentanyl']}} mg</b>
             </h6>
           </td>
 
@@ -199,24 +197,24 @@
           <td>
             <h6>First dose - repeat if necessary
               <br>
-              <b *ngIf="data['Thiopentone'] < 250">{{data['Thiopentone']}} mg</b>
-              <b *ngIf="data['Thiopentone'] >= 250">200 mg</b>
+              <b>{{data['Thiopentone']}} mg</b>
+              
               <hr>Second dose - must be signed for
               <br>
-              <b *ngIf="data['Thiopentone'] < 250">{{data['Thiopentone']}} mg</b>
-              <b *ngIf="data['Thiopentone'] >= 250">200 mg</b>
+              <b >{{data['Thiopentone']}} mg</b>
+              
             </h6>
           </td>
 
           <td>
             <h6>First dose - repeat if necessary
               <br>
-              <b *ngIf="data['Thiopentone'] < 250">{{((data['Thiopentone'])/25)| number : '1.2-2'}} mg</b>
-              <b *ngIf="roundWt*2 >= 250">{{200/25}} mg</b>
+              <b>{{((data['Thiopentone'])/25)| number : '1.2-2'}} mg</b>
+              
               <hr>Second dose - must be signed for
               <br>
-              <b *ngIf="data['Thiopentone'] < 250">{{((data['Thiopentone'])/25) | number : '1.2-2'}} mg</b>
-              <b *ngIf="roundWt*2 >= 250">{{200/25}} mg</b>
+              <b>{{((data['Thiopentone'])/25) | number : '1.2-2'}} mg</b>
+              
             </h6>
           </td>
 
@@ -258,11 +256,11 @@
             <br>Burns/Myopathies/Hyperkalaemia</td>
           <td>10mg/ml [Dilute to 10ml with 0.9% saline]</td>
           <!--conditions  -->
-          <td *ngIf="data['Suxamethonium'] < 101">{{data['Suxamethonium']}} mg</td>
-          <td *ngIf="data['Suxamethonium'] > 100">100 mg</td>
+          <td >{{data['Suxamethonium']}} mg</td>
+          
 
-          <td *ngIf="data['Suxamethonium'] < 101">{{((data['Suxamethonium'])/10)| number : '1.2-2'}} ml</td>
-          <td *ngIf="data['Suxamethonium'] > 100">{{100/10}} mg</td>
+          <td>{{((data['Suxamethonium'])/10)| number : '1.2-2'}} ml</td>
+          
           <!--end of conditions  -->
           <td>IV</td>
           <td>{{local.prescriber}}</td>

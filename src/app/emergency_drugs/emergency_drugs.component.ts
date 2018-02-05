@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
-
+import * as jsPDF from 'jspdf';
 declare let html2canvas: any;
-declare let jsPDF: any;
+// declare let jsPDF: any;
 @Component({
   selector: 'emergency_drugs',
   templateUrl: 'emergency_drugs.component.html'
@@ -17,7 +17,7 @@ export class EmergencyDrugsComponent {
         });
         doc.addImage(img, 'JPEG', 20, 20, 400, 550);
         doc.autoPrint();
-        window.open(doc.output('bloburl'), '_blank');
+        window.open(doc.output('bloburl'), '_self');
       }
     })
   }

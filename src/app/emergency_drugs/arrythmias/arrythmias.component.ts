@@ -10,10 +10,10 @@ export class ArrythmiasComponent implements OnInit {
     local;
     data={};
     config = {
-        'x': 30,
+        'x': 0,
         // 'y': 50,
         'line-width': 2,
-        'line-length': 20,
+        'line-length': 8,
         'text-margin': 10,
         'font-size': 14,
         'font': 'normal',
@@ -106,7 +106,7 @@ export class ArrythmiasComponent implements OnInit {
 
         let chart = flowchart.parse(content);
         chart.drawSVG('canvas', this.config);
-
+        this.config['x'] = 0;
 
         // Second Canvas
 
@@ -118,17 +118,17 @@ export class ArrythmiasComponent implements OnInit {
         op3=>operation: Synchronous DC shock 0.5J/k\n ${this.data['syndcshock0.5']} Estimated Joules|past\n\
         op4=>operation: Adenosine ${this.data['adenosine200']}mg \n(200microgram/kg) |past\n\
         op5=>operation: Synchronous DC shock 1J/k \n${this.data['syndcshock1']} Estimated Joules|past/\n\
-        op6=>operation: |past\n\
         op7=>operation: Synchronous DC shock 2J/k\n${this.data['syndcshock2']} Estimated Joules |past\n\
         op8=>operation: Do not exceed adenosine \n\ maximum single dose 12mg |past\n\
         op9=>operation: consider using antiarrhythmics |past\n\
         e=>operation: CONSIDER \nSynchronous DC shock\n(see warning)\nPlease D/W Cardiology\n prior to using:-\n Verapamil Amiadarone\n flacainide propranolol\n Digoxin|past\n\
-      st(no)->op1->op2->op4->op6->op8->e\n\
+      st(no)->op1->op2->op4->op8->e\n\
       st(yes,right)->op10->cond\n\
       cond(yes)->op2\n\
       cond(no)->op3->op5->op7->op9->op7
       `;
 
+      this.config['x'] = 5;
         let chart1 = flowchart.parse(content1);
         chart1.drawSVG('canvas1', this.config);
 
@@ -140,7 +140,7 @@ export class ArrythmiasComponent implements OnInit {
         op2=>operation: continue CPR    Intubate IV/IO access|current\n\
         op3=>operation: Epinephrine  ${this.data['epinephrine']}\n10mcg/kg IV or IO |past\n\
         op4=>operation: Check monitor every two minutes|current\n\
-        e=>operation: 4 min CPR|past\n\
+        e=>operation: Four  minutes  CPR|past\n\
         st->op1->op2->op3->op4->e\n\
         e->op3
         `;

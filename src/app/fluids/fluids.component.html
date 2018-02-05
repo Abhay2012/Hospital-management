@@ -10,17 +10,17 @@
           <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
               <div id="details">
-                ETT SIZE : {{data.ETT.size}}
+                ETT SIZE : {{data['ETT']['size']}}
               </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
               <div id="details">
-                ETT ORAL LENGTH :{{data.ETT.oral}}
+                ETT ORAL LENGTH :{{data['ETT']['oral']}}
               </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
               <div id="details">
-                ETT NASAL LENGTH : {{data.ETT.nasal}}
+                ETT NASAL LENGTH : {{data['ETT']['nasal']}}
               </div>
             </div>
           </div>
@@ -54,7 +54,7 @@
                 </div>
                 <h4><b>Maintenance fluids calculation</b></h4>
                 <div class="card">
-                <table class="table table-striped">
+                <table class="table table-bordered">
                     <thead>
                         <tr style="background-color:#97b714; font-weight:600; color:#fff;">
                             <td>Weight</td>
@@ -104,7 +104,7 @@
                 <div class="row">
                     <div clas="col-lg-6">
                         <div class="card">
-                        <table class="table table-striped">
+                        <table class="table table-bordered">
                             <tbody>
                                 <tr>
                                     <td>Total ml/kg/24 hours</td>
@@ -157,7 +157,7 @@
                 <h4 *ngIf="weight>35" id="insulin">Initial Insulin Rate :  {{(weight*0.1)| number : '1.2-2'}}</h4>
                 <!--condition  -->
                 <div class="card">
-                <table class="table table-striped">
+                <table class="table table-bordered">
                     <thead>
                         <tr  style="background-color:#97b714; font-weight:600; color:#fff;">
                             <td>Weight</td>

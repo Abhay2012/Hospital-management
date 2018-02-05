@@ -1,19 +1,20 @@
 <div class="jumbotron">
     <div class="container">
       <div class="row">
+          <h3 style="font-weight:600; margin-left:20px;color:#718800">Information</h3>
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
           <div id="details">
-            ETT SIZE : {{data.ETT.size}}
+            ETT SIZE : {{data['ETT']['size']}}
           </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
           <div id="details">
-            ETT ORAL LENGTH :{{data.ETT.oral}}
+            ETT ORAL LENGTH :{{data['ETT']['oral']}}
           </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
           <div id="details">
-            ETT NASAL LENGTH : {{data.ETT.nasal}}
+            ETT NASAL LENGTH : {{data['ETT']['nasal']}}
           </div>
         </div>
       </div>
@@ -22,7 +23,7 @@
 <div class="container-fluid">
     <h3><b>OPIATES/SEDATIVE</b></h3>
     <div class="card">
-    <table class="table table-striped">
+    <table class="table table-bordered">
       <thead>
         <tr style="background-color:#97b714; font-weight:600; color:#fff;">
           <td>Drug Solution</td>
@@ -44,13 +45,13 @@
         <tr class="default">
           <td>Morphine 10mg/ml</td>
           <!--conditions  -->
-          <td *ngIf="roundWt < 50">{{roundWt/10}}</td>
-          <td *ngIf="roundWt >= 50">5</td>
+          <td>{{roundWt < 50 ? roundWt/10 : 5 }}</td>
+          
           <!--condition 1 end  -->
           <td>1mg/kg (max 50mg)</td>
           <!--condition2  -->
-          <td *ngIf="roundWt < 50">{{roundWt}}</td>
-          <td *ngIf="roundWt >= 50">50</td>
+          <td>{{roundWt < 50 ? roundWt : 50 }}</td>
+          
           <!--condition2 end  -->
           <td>5% Glucose or Nacl 0.9%</td>
           <td>50</td>
@@ -66,13 +67,12 @@
         <tr class="default">
           <td>Midazolam 15mg/3ml</td>
           <!--condition1  -->
-          <td *ngIf="roundWt < 40">{{((roundWt*6)/5) | number : '1.2-2'}}</td>
-          <td *ngIf="roundWt >= 40">{{((roundWt*3)/5)| number : '1.2-2'}}</td>
+          <td>{{((roundWt < 40 ? roundWt*6 : roundWt*3 )/5) | number : '1.2-2'}}</td>
           <!--condition1 end  -->
           <td>40kg: 6mg/kg >40kg: 3mg/kg</td>
           <!--condition2  -->
-          <td *ngIf="roundWt < 40">{{roundWt*6}}</td>
-          <td *ngIf="roundWt >= 40">{{roundWt*3}}</td>
+          <td>{{roundWt < 40 ? roundWt*6 : roundWt*3}}</td>
+          
           <!--conditon2 end  -->
           <td>5% Glucose or Nacl 0.9%</td>
           <td>50 ml</td>
@@ -152,7 +152,7 @@
   <div class="container-fluid">
     <h3><b>MUSCLE RELAXANTS</b></h3>
     <div class="card">
-    <table class="table table-striped">
+    <table class="table table-bordered">
       <thead>
         <tr style="background-color:#97b714; font-weight:600; color:#fff;">
           <td>Drug</td>
@@ -221,7 +221,7 @@
   <div class="container-fluid">
     <h3><b>VASOACTIVE MEDICATION</b></h3>
     <div class="card">
-    <table class="table table-striped">
+    <table class="table table-bordered">
       <thead>
         <tr style="background-color:#97b714; font-weight:600; color:#fff;">
           <td>Drug</td>
@@ -415,7 +415,7 @@
   <div class="container-fluid">
     <h3><b>Asthma MEDICATION</b></h3>
     <div class="card">
-    <table class="table table-striped">
+    <table class="table table-bordered">
       <thead>
         <tr style="background-color:#97b714; font-weight:600; color:#fff;">
           <td>Drug</td>

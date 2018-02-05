@@ -13,3 +13,9 @@
 .jumbotron{
     padding-top : 0px !important;   
 }
+
+@media print {
+    #div_2{
+        display: none;
+    }
+}

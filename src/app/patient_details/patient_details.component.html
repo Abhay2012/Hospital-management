@@ -1,5 +1,5 @@
 <!-- patient details -->
-<div class="jumbotron" style="margin-bottom:0px;">
+<div class="jumbotron" style="margin-bottom:5px;">
   <div class="container">
     <div class="row">
       <h3 style="font-weight:600; margin-left:20px;color:#718800">Patient Details</h3>
@@ -35,7 +35,7 @@
         </div>
         <br>
         <div id="details">
-            DOB: {{local.patientDOB}}
+            DOB: {{local.patientDOB | date}}
           </div>
       </div>
 
