@@ -11,6 +11,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "electron": "electron .",
+    "dist" : "build",
+    "electron:linux": "npm run build:prod && node package.js --asar --platform=linux --arch=x64",
     "electron-build": "ng build --prod && electron ."
   },
   "private": true,
