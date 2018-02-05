@@ -1,0 +1,87 @@
+<div style="text-align:center">
+    <h1>
+      Emergency Drugs Calculator - PICU
+    </h1>
+  </div>
+<p style="text-align:center">Users of this calculator should have had the required training and should have read the user manual</p>
+<br>
+<div>
+    <ul style="width:50%;margin:auto" class="nav nav-tabs">
+        <li role="presentation" [class.active]="tab==1" (click)="tab=1">
+            <a href="#">Emergency Drugs</a>
+        </li>
+        <li role="presentation" [class.active]="tab==2" (click)="tab=2">
+            <a href="#">DKA</a>
+        </li>
+        <li role="presentation" [class.active]="tab==3" (click)="tab=3">
+            <a href="#">Fluids</a>
+        </li>
+    </ul>
+</div>
+
+<form #entryForm="ngForm">
+    <table class="table" style="margin:auto;width:50%">
+        <tr>
+            <td>
+                <b> Enter Patient Name : </b>
+            </td>
+            <td>
+                <input type="text" name="patientName"  [(ngModel)]="local.patientName" class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b> Date Of Birth : </b>
+            </td>
+            <td>
+                <input type="date" class="form-control" name="patientDOB" [(ngModel)]="local.patientDOB">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b> Hospital Number : </b>
+            </td>
+            <td>
+                <input type="number" class="form-control" name="hospitalNo"  [(ngModel)]="local.hospitalNo">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b> Ward : </b>
+            </td>
+            <td>
+                <input type="text" class="form-control" name="ward" [(ngModel)]="local.ward">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b> Patient Weight (in Kg) : </b>
+            </td>
+            <td>
+                <input type="number" class="form-control" required name="patientWeight" [(ngModel)]="local.patientWeight">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b> Patient Age : </b>
+            </td>
+            <td>
+                <input type="number" class="form-control"  required name="patientAge" [(ngModel)]="local.patientAge">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b> Prescriber Name : </b>
+            </td>
+            <td>
+                <input type="text" class="form-control" name="prescriber" [(ngModel)]="local.prescriber">
+            </td>
+        </tr>
+        <br>
+        <tfoot>
+            <td></td>
+            <button style="float:right" class="btn btn-primary" [disabled]="entryForm.invalid" (click)="dataEntered(entryForm)">Submit</button>
+            <button style="float:right;margin-right:10px" class="btn btn-primary" (click)="clearData()">Clear</button>
+        </tfoot>
+    </table>
+</form>

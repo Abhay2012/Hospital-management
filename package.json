@@ -1,6 +1,7 @@
 {
   "name": "angular-electron",
   "version": "0.0.0",
+  "author": "Abhay <abhay.sehgal20@gmail.com>",
   "license": "MIT",
   "main": "main.js",
   "scripts": {
@@ -11,9 +12,35 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "electron": "electron .",
-    "dist" : "build",
-    "electron:linux": "npm run build:prod && node package.js --asar --platform=linux --arch=x64",
+    "dist": "build",
     "electron-build": "ng build --prod && electron ."
+  },
+  "build": {
+    "appId": "yourappid",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "squirrel",
+      "icon": "build/icon.ico"
+    }
   },
   "private": true,
   "dependencies": {
@@ -41,7 +68,10 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "codelyzer": "~3.2.0",
+    "electron": "1.7.11",
     "electron-builder": "^19.55.3",
+    "electron-package": "^0.1.0",
+    "electron-packager": "^10.1.2",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
     "karma": "~1.7.0",

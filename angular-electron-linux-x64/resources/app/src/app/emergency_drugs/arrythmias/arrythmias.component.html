@@ -1,0 +1,74 @@
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <h3 style="font-weight:600; margin-left:20px;color:#718800">Information</h3>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                <div id="details">
+                    <table class="table table-borderd">
+                        <thead>
+                            <tr class="danger">
+                                <td>Drug</td>
+                                <td>Dose</td>
+                                <td>Dose to Given</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Epinephrine 1:10,000</td>
+                                <td>10mcg/kg (0.1ml/kg)</td>
+                                <td>{{this.data['doseToGiven']['epinephrine']}} micrograms</td>
+                            </tr>
+                            <tr>
+                                <td>Amiodarone</td>
+                                <td>5mg/kg (max 300mg)</td>
+                                <td> {{this.data['doseToGiven']['amiodarone']}} micrograms </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="alert alert-danger">
+        <ul>
+            <li>
+                <b> Warning! Please ensure patients are sedated or anaesthetised for cardioversion, unless patient already unconscious</b>
+            </li>
+        </ul>
+    </div>
+
+    <div class="alert alert-warning">
+        <ul>
+            <li>
+                <b> REMEMBER TO RECORD ECG CHANGES ON MACHINE ESP WHEN GIVING TREATMENT</b>
+            </li>
+            <li>
+                <b> FOR DRUG DOSES PLEASE SEE RESUS DRUGS PAGE</b>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+
+<div style="overflow:hidden">
+
+    <div class="col-sm-4" style="text-align:center">
+        <strong>Ventricular Fibrillation and Pulseless Ventricular Tachycardia</strong>
+        <div id="canvas"></div>
+    </div>
+    <div class="col-sm-8" style="text-align:center">
+        <strong> Supraventricular Tachycardia </strong>
+        <div id="canvas1"></div>
+    </div>
+</div>
+<div style="overflow:hidden">
+    <div class="col-sm-4" style="text-align:center">
+        <strong> Asystole and PEA </strong>
+        <div id="canvas2"></div>
+    </div>
+</div>
