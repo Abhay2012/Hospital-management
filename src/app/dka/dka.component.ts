@@ -23,4 +23,7 @@ export class DkaComponent{
             this.totalMls += ml;
         }
     }
+    print1() {
+        window.print();
+      }
 }

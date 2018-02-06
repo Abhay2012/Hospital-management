@@ -28,4 +28,8 @@ export class FluidsComponent{
             nasal : (parseInt(this.local.patientAge)/2)+15
         }
     }
+
+    print1() {
+        window.print();
+      }
 }
