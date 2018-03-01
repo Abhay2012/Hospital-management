@@ -95,14 +95,13 @@ export class ArrythmiasComponent implements OnInit {
         op3=>operation: 2 min CPR\n Check Monitor |current\n\
         op4=>operation: Epinephrine then DC SHOCK 4 J/KG\n${this.data['dcshock']}  Estimated Joules|past\n\
         op5=>operation: 2 min CPR\n Check Monitor|current\n\
-        op6=>operation: Amiodarone then DC SHOCK 4 J KG\n${this.data['dcshock']}  Estimated Joules|past\n\
+        op6=>operation: DC SHOCK 4 J/KG\n${this.data['dcshock']}  Estimated Joules|past\n\
         op7=>operation: 2 min CPR\n Check Monitor|current\n\
         op8=>operation: Epinephrine then DC SHOCK 4 J/KG\n${this.data['dcshock']}  Estimated Joules|past\n\
         op9=>operation: 2 min CPR\n Check Monitor|current\n\
-        e=>operation: DC SHOCK 4 J/KG\n${this.data['dcshock']}  Estimated Joules|past\n\
-        op10=>operation: 2 min CPR\n Check Monitor|current\n\
-        st->op1->op2->op3->op4->op5->op6->op7->op8->op9->e\n\
-        e(right)->op10(right)->op8`;
+        e=>operation: Amiodarone or Lidocaine then DC SHOCK 4 J KG \n Treat reversible causes|past\n\
+        st->op1->op2->op3->op4->op5->op6->op7->e\n\
+        e(left)->op4`;
 
         let chart = flowchart.parse(content);
         chart.drawSVG('canvas', this.config);
@@ -119,9 +118,9 @@ export class ArrythmiasComponent implements OnInit {
         op4=>operation: Adenosine ${this.data['adenosine200']}mg \n(200microgram/kg) |past\n\
         op5=>operation: Synchronous DC shock 1J/k \n${this.data['syndcshock1']} Estimated Joules|past/\n\
         op7=>operation: Synchronous DC shock 2J/k\n${this.data['syndcshock2']} Estimated Joules |past\n\
-        op8=>operation: Do not exceed adenosine \n\ maximum single dose 12mg |past\n\
+        op8=>operation: Do not exceed adenosine first\n\dose 6mg and maximum second \n dose 12mg\n Use rapid bolus technique |past\n\
         op9=>operation: consider using antiarrhythmics |past\n\
-        e=>operation: CONSIDER \nSynchronous DC shock\n(see warning)\nPlease D/W Cardiology\n prior to using:-\n Verapamil Amiadarone\n flacainide propranolol\n Digoxin|past\n\
+        e=>operation: CONSIDER \nSynchronous DC shock\n(see warning)\nPlease D/W Cardiology\n prior to using:-\n Verapamil Amiadarone\n flacainide propranolol\n Digoxin\n 051-1 J/kg, may increase to\n 2J/kg if initial shock in effective|past\n\
       st(no)->op1->op2->op4->op8->e\n\
       st(yes,right)->op10->cond\n\
       cond(yes)->op2\n\
