@@ -7,7 +7,7 @@ declare let html2canvas: any;
   templateUrl: 'emergency_drugs.component.html'
 })
 export class EmergencyDrugsComponent {
-  print() {
+  print1() {
     html2canvas(document.body, {
       onrendered: function (canvas) {
         var img = canvas.toDataURL("image/png");
@@ -21,7 +21,7 @@ export class EmergencyDrugsComponent {
       }
     })
   }
-  print1() {
+  print() {
     window.print();
   }
 }

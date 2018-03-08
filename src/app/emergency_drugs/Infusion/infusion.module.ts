@@ -1,19 +1,18 @@
 import { NgModule } from "@angular/core";
 import { RouterModule} from "@angular/router";
 import { InfusionComponent } from "./infusion.component";
-import { CommonModule } from '@angular/common';
+import { InfusionSharedModule } from './infusion-shared.module'
 
 @NgModule({
     imports : [
-        CommonModule,
+        InfusionSharedModule,
         RouterModule.forChild([
             {
                 path : '',
                 component : InfusionComponent
             }
         ])
-    ],
-    declarations : [InfusionComponent]
+    ]
 })
 export class InfusionModule{
 

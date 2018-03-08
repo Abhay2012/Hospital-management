@@ -1,19 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ResusDrugsComponent } from './resus_drugs.component';
-import { CommonModule } from '@angular/common';
+import { ResusDrugsSharedModule } from './resus_drugs-shared.module'
 
 @NgModule({
     imports : [ 
-        CommonModule,
+        ResusDrugsSharedModule,
         RouterModule.forChild([
             {
                 path : '',
                 component : ResusDrugsComponent
             }
         ])
-    ],
-    declarations : [ResusDrugsComponent]
+    ]
 })
 export class ResusDrugsModule{
 

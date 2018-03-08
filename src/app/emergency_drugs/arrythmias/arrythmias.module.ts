@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { ArrythmiasComponent } from './arrythmias.component';
 import { RouterModule } from '@angular/router';
 import { PatientDetailsModule } from '../../patient_details/patient_details.module';
+import { ArrythmiasSharedModule } from "./arrythmias-shared.module"
 
 @NgModule({
     imports : [ RouterModule.forChild([
@@ -10,9 +11,9 @@ import { PatientDetailsModule } from '../../patient_details/patient_details.modu
             component : ArrythmiasComponent
         }
     ]),
-    PatientDetailsModule
-    ],
-    declarations : [ArrythmiasComponent]
+    PatientDetailsModule,
+    ArrythmiasSharedModule
+    ]
 })
 export class ArrythmiasModule{
 

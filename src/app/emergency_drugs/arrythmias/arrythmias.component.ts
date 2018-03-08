@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 declare let flowchart: any;
 @Component({
-    selector: '',
+    selector: 'arrythmias',
     templateUrl: 'arrythmias.component.html'
 })
 export class ArrythmiasComponent implements OnInit {

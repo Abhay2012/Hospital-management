@@ -1,19 +1,18 @@
 import { NgModule } from '@angular/core';
 import { IntubationComponent } from './intubation.component';
 import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
+import { IntubationSharedModule } from './intubation-shared.module'
 
 @NgModule({
     imports : [
-        CommonModule,
+        IntubationSharedModule,
         RouterModule.forChild([
             {
                 path : '',
                 component : IntubationComponent
             }
         ])
-    ],
-    declarations : [IntubationComponent]
+    ]
 })
 export class IntubationModule{
 
