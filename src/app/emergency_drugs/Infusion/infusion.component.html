@@ -1,31 +1,28 @@
-<div class="jumbotron">
-    <div class="container">
-      <div class="row">
-          <h3 style="font-weight:600; margin-left:20px;color:#718800">Information</h3>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-          <div id="details">
-            ETT SIZE : {{data['ETT']['size']}}
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-          <div id="details">
-            ETT ORAL LENGTH :{{data['ETT']['oral']}}
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-          <div id="details">
-            ETT NASAL LENGTH : {{data['ETT']['nasal']}}
-          </div>
-        </div>
-      </div>
+
+
+<div class="patient-details">
+
+          <table class="center">
+              <tr>
+                <td>ETT SIZE:</td>
+                <td>{{data['ETT']['size']}}</td>
+              </tr>
+              <tr>
+                <td>ETT ORAL LENGTH:</td>
+                <td>{{data['ETT']['oral']}}</td>
+              </tr>
+              <tr>
+                  <td>ETT NASAL LENGTH:</td>
+                  <td>{{data['ETT']['nasal']}}</td>
+                </tr>
+            </table>
     </div>
-  </div>
-<div class="container-fluid">
-    <h3><b>OPIATES/SEDATIVE</b></h3>
-    <div class="card">
-    <table class="table table-bordered">
+
+
+    <h5>OPIATES/SEDATIVE</h5>
+    <table class="picuTable">
       <thead>
-        <tr style="background-color:#97b714; font-weight:600; color:#fff;">
+        <tr>
           <td>Drug Solution</td>
           <td>ml of Drug solution</td>
           <td>Concentration</td>
@@ -42,7 +39,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="default">
+        <tr>
           <td>Morphine 10mg/ml</td>
           <!--conditions  -->
           <td>{{roundWt < 50 ? roundWt/10 : 5 }}</td>
@@ -64,7 +61,7 @@
           <td></td>
         </tr>
 
-        <tr class="default">
+        <tr>
           <td>Midazolam 15mg/3ml</td>
           <!--condition1  -->
           <td>{{((roundWt < 40 ? roundWt*6 : roundWt*3 )/5) | number : '1.2-2'}}</td>
@@ -85,7 +82,7 @@
           <td></td>
         </tr>
 
-        <tr class="default">
+        <tr>
           <td>Fentanyl 100mcg/2ml</td>
           <!--condition 1  -->
           <td>{{((data['Fentanyl'])*1000/50) | number : '1.2-2'}}</td>
@@ -105,7 +102,7 @@
           <td></td>
         </tr>
 
-        <tr class="default">
+        <tr>
           <td>Ketamine 10mg/ml</td>
           <td>5</td>
           <td>50 mg in 50 mls Glu 5% or NaCl 0.9%</td>
@@ -123,7 +120,7 @@
 
 
 
-        <tr class="default">
+        <tr>
           <td>Clonidine</td>
           <td></td>
           <td></td>
@@ -141,7 +138,7 @@
           <td></td>
         </tr>
 
-        <tr class="default">
+        <tr>
           <td>Propofol (1%)</td>
           <td>50</td>
           <td></td>
@@ -161,19 +158,14 @@
 
       </tbody>
     </table>
-  </div>
-</div>
   <!-- end of containr2  -->
 
   <!--container 3 -->
   <!--table2 -->
-
-  <div class="container-fluid">
-    <h3><b>MUSCLE RELAXANTS</b></h3>
-    <div class="card">
-    <table class="table table-bordered">
+    <h5>MUSCLE RELAXANTS</h5>
+    <table class="picuTable">
       <thead>
-        <tr style="background-color:#97b714; font-weight:600; color:#fff;">
+        <tr>
           <td>Drug</td>
           <td>ml of Drug solution</td>
           <td>Concentration</td>
@@ -190,7 +182,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="default">
+        <tr>
           <td>Atracurium 500mg/5ml</td>
           <td>2.5</td>
           <td></td>
@@ -206,7 +198,7 @@
           <td></td>
         </tr>
 
-        <tr class="default">
+        <tr>
           <td>Atracurium 500mg/5ml</td>
           <td>2.5</td>
           <td></td>
@@ -222,27 +214,22 @@
           <td></td>
         </tr>
 
-        <tr class="default">
+        <tr>
           <td colspan="13">Rocuronium</td>
         </tr>
 
       </tbody>
     </table>
-  </div>
-  </div>
   <!--table 2 end -->
   <!--Container 3 end  -->
 
 
   <!--container 4 -->
   <!--table3 -->
-
-  <div class="container-fluid">
-    <h3><b>VASOACTIVE MEDICATION</b></h3>
-    <div class="card">
-    <table class="table table-bordered">
+    <h5>VASOACTIVE MEDICATION</h5>
+    <table class="picuTable">
       <thead>
-        <tr style="background-color:#97b714; font-weight:600; color:#fff;">
+        <tr>
           <td>Drug</td>
           <td>ml of Drug solution</td>
           <td>Concentration</td>
@@ -259,7 +246,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="default">
+        <tr>
           <td>Epinephrine <b>Central Unless In Extreme circumstances</b></td>
           <td></td>
           <td></td>
@@ -277,7 +264,7 @@
           <td></td>
         </tr>
 
-        <tr class="default">
+        <tr>
           <td>Norepinephrine <b> Central Line</b></td>
           <td></td>
           <td></td>
@@ -295,7 +282,7 @@
           <td></td>
         </tr>
 
-        <tr class="default">
+        <tr>
           <td>Dopamine <b>Peripheral</b></td>
           <td></td>
           <td>
@@ -314,7 +301,7 @@
               <td></td>
         </tr>
 
-        <tr class="default">
+        <tr>
           <td>Dopamine Peripheral</td>
           <td></td>
           <td>> 10 kg: 3mg/kg</td>
@@ -333,7 +320,7 @@
         </tr>
 
 
-        <tr class="default">
+        <tr>
           <td>Dopamine <b>Central Line</b></td>
           <td></td>
           <td></td>
@@ -351,7 +338,7 @@
           <td></td>
         </tr>
 
-        <tr class="default">
+        <tr>
           <td>Dobutamine <b>Peripheral Line</b></td>
           <td></td>
           <td>
@@ -370,7 +357,7 @@
               <td></td>
         </tr>
 
-        <tr class="default">
+        <tr>
           <td>Dobutamine <b>Peripheral Line</b></td>
           <td></td>
           <td> > 10 kg: 3mg/kg</td>
@@ -388,7 +375,7 @@
           <td></td>
         </tr>
 
-        <tr class="default">
+        <tr>
           <td>Dobutamine <b>Central Line</b></td>
           <td></td>
           <td></td>
@@ -406,7 +393,7 @@
           <td></td>
         </tr>
 
-        <tr class="default">
+        <tr>
           <td></td>
           <td></td>
           <td></td>
@@ -423,20 +410,16 @@
         </tr>
       </tbody>
     </table>
-  </div>
-  </div>
   <!--table 3 end -->
   <!--Container 4 end  -->
 
 
   <!--container 5  -->
   <!--table 4  -->
-  <div class="container-fluid">
-    <h3><b>Asthma MEDICATION</b></h3>
-    <div class="card">
-    <table class="table table-bordered">
+    <h5>Asthma MEDICATION</h5>
+    <table class="picuTable">
       <thead>
-        <tr style="background-color:#97b714; font-weight:600; color:#fff;">
+        <tr>
           <td>Drug</td>
           <td>ml of Drug solution</td>
           <td>Concentration</td>
@@ -455,7 +438,7 @@
       </thead>
       <tbody>
 
-        <tr class="default">
+        <tr>
           <td>Salbutamol 2.5 mg/2.5 ml</td>
           <td>10</td>
           <td>Diluted</td>
@@ -472,7 +455,7 @@
         </tr>
 
 
-        <tr class="default">
+        <tr>
           <td>Salbutamol 2.5 mg/2.5 ml Central</td>
           <td>50</td>
           <td>Neat</td>
@@ -489,7 +472,7 @@
         </tr>
 
 
-        <tr class="default">
+        <tr>
           <td>Aminophylline 25mg/ml Loading Dose</td>
           <td>2</td>
           <td></td>
@@ -506,7 +489,7 @@
         </tr>
 
 
-        <tr class="default">
+        <tr>
           <td>Aminophylline 25mg/ml Maintenance</td>
           <td>2</td>
           <td></td>
@@ -523,7 +506,7 @@
         </tr>
 
 
-        <tr class="default">
+        <tr>
           <td></td>
           <td></td>
           <td></td>
@@ -540,5 +523,3 @@
         </tr>
       </tbody>
     </table> 
-  </div>
-  </div>

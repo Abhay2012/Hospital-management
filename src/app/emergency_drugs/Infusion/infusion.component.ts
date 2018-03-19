@@ -1,5 +1,5 @@
 import { Component, OnInit  } from "@angular/core";
-
+declare var $ :any;
 @Component({
     selector : 'infusion',
     templateUrl : "infusion.component.html"
@@ -10,6 +10,7 @@ export class InfusionComponent implements OnInit{
     roundWt;
     data={};
     ngOnInit(){
+        $('a:first').tab('show')
         this.local = localStorage;
         this.roundWt = parseInt(localStorage.getItem('roundWeight'));
         this.data['Fentanyl'] = this.roundWt*0.125;
