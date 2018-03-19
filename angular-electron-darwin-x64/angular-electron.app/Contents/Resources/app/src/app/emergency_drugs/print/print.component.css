@@ -1,0 +1,4 @@
+@media print and (min-width: 100px) {
+    body {transform: scale(.7);}
+    table {page-break-inside: avoid;}
+}

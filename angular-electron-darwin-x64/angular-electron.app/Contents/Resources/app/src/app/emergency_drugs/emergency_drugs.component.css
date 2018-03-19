@@ -1,0 +1,32 @@
+.subHeader{
+    background: linear-gradient(#dad9d9,#adacac);
+    padding:0px 15px;
+}
+.subHeader ul{
+    list-style: none;
+    display: -webkit-inline-box;
+    padding:0px;
+    margin:0px;
+}
+.subHeader ul li{
+padding:5px 15px;
+cursor: pointer;
+transition: 0.5s;
+border-left:1px solid darkgray;
+border-right:1px solid darkgray;
+}
+.subHeader ul li:hover{
+    background: #c0c0c0;
+}
+.subHeader ul .active{
+    border:1px solid darkgray;
+    border-bottom: 0px;
+    box-shadow:0 -1px 1px gray;
+    background: #c0c0c0;
+    font-weight: bold;
+}
+
+.btnSection{
+    margin:10px;
+    float: right;;
+}
