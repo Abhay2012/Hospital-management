@@ -64,7 +64,7 @@
           <td>{{(data['Atropine']) | number : '1.2-2'}} mg</td>
           
           <!--condition 2  -->
-          <td>{{(data['Atropine']*10) | number : '1.2-2'}} mg</td>
+          <td>{{(data['Atropine']*10) | number : '1.2-2'}} ml</td>
           <!--end of conditions   -->
           <td>IV</td>
           <td>{{local.prescriber}}</td>
@@ -95,11 +95,11 @@
           <td>
             <h6>First dose - repeat if necessary
               <br>
-              <b>{{(data['Morphine']) | number : '1.2-2'}} mg</b>
+              <b>{{(data['Morphine']) | number : '1.2-2'}} ml</b>
               
               <hr>Second dose - must be signed for
               <br>
-              <b>{{(data['Morphine']) | number : '1.2-2'}} mg</b>
+              <b>{{(data['Morphine']) | number : '1.2-2'}} ml</b>
               
             </h6>
           </td>
@@ -131,7 +131,7 @@
           <td>
             <h6>First dose - repeat if necessary
               <br>
-              <b>{{(data['Fentanyl']) | number : '1.2-2'}} mg</b>
+              <b>{{(data['Fentanyl'])}} mg</b>
               <hr>Second dose - must be signed for
               <br>
               <b>{{data['Fentanyl']}} mg</b>
@@ -141,10 +141,10 @@
           <td>
             <h6>First dose - repeat if necessary
               <br>
-              <b>{{((data['Fentanyl'])*100) | number : '1.2-2'}} mg</b>
+              <b>{{((data['Fentanyl'])*100) | number : '1.2-2'}} ml</b>
               <hr>Second dose - must be signed for
               <br>
-              <b>{{((data['Fentanyl'])*100) | number : '1.2-2'}} mg</b>
+              <b>{{((data['Fentanyl'])*100) | number : '1.2-2'}} ml</b>
             </h6>
           </td>
           <!--end of conditions  -->
@@ -171,8 +171,8 @@
             <hr>BEWARE of different concentrations of ketamine vials</td>
           <td>10mg/ml [dilute to 5ml with 0.9% saline]</td>
           <!--conditions  -->
-          <td>{{data['Ketamine']*2}} mg</td>
-          <td>{{(data['Ketamine']*2)/10}} ml</td>
+          <td>{{data['Ketamine']}} mg</td>
+          <td>{{(data['Ketamine'])/10}} ml</td>
           <!--condition end  -->
           <td>IV</td>
           <td>{{local.prescriber}}</td>
@@ -206,11 +206,11 @@
           <td>
             <h6>First dose - repeat if necessary
               <br>
-              <b>{{((data['Thiopentone'])/25)| number : '1.2-2'}} mg</b>
+              <b>{{((data['Thiopentone'])/25)| number : '1.2-2'}} ml</b>
               
               <hr>Second dose - must be signed for
               <br>
-              <b>{{((data['Thiopentone'])/25) | number : '1.2-2'}} mg</b>
+              <b>{{((data['Thiopentone'])/25) | number : '1.2-2'}} ml</b>
               
             </h6>
           </td>

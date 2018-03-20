@@ -13,9 +13,9 @@ export class InfusionComponent implements OnInit{
     currentTable:string;
     ngOnInit(){
         this.currentTable = 'opiates';
-        $('a:first').tab('show')
         this.local = localStorage;
         this.roundWt = parseInt(localStorage.getItem('roundWeight'));
+        console.log(this.roundWt);
         this.data['Fentanyl'] = this.roundWt*0.125;
         this.data['ETT'] = {
             size : (parseInt(this.local.patientAge)/4)+4,

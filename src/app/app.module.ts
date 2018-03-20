@@ -2,16 +2,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
+import { SplashScreenComponent } from "./splash/splash-screen.component";
 
 @NgModule({
   declarations: [
-    AppComponent  
+    AppComponent,
+    SplashScreenComponent  
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       {
         path : '',
+        component : SplashScreenComponent
+      },
+      {
+        path : 'data-entry',
         loadChildren : 'app/data entry/dataentry.module#DataEntryModule',
       },
       {
