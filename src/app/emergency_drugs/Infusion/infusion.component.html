@@ -1,7 +1,15 @@
 
+          <div class="subTabs">
+                  <ul id="nav-bar">
+                      <li [class.active]="currentTable == 'opiates'" (click)="showTable('opiates')">OPIATES/SEDATIVE</li>
+                      <li [class.active]="currentTable == 'mr'" (click)="showTable('mr')">MUSCLE RELAXANTS</li>
+                      <li [class.active]="currentTable == 'vm'" (click)="showTable('vm')">VASOACTIVE MEDICATION</li>
+                      <li [class.active]="currentTable == 'am'" (click)="showTable('am')">ASTHMA MEDICATION</li>
+                  </ul>
+              </div>
 
-<div class="patient-details">
 
+<div class="patient-details media">
           <table class="center">
               <tr>
                 <td>ETT SIZE:</td>
@@ -17,8 +25,17 @@
                 </tr>
             </table>
     </div>
+    <div class="patient-details print">
+        <table class="center">
+            <tr>
+              <td>ETT SIZE:{{data['ETT']['size']}}</td>
+              <td>ETT ORAL LENGTH:{{data['ETT']['oral']}}</td>
+              <td>ETT NASAL LENGTH:{{data['ETT']['nasal']}}</td>
+            </tr>
+          </table>
+  </div>
 
-
+    <div *ngIf="currentTable == 'opiates'">
     <h5>OPIATES/SEDATIVE</h5>
     <table class="picuTable">
       <thead>
@@ -158,10 +175,12 @@
 
       </tbody>
     </table>
+  </div>
   <!-- end of containr2  -->
 
   <!--container 3 -->
   <!--table2 -->
+  <div *ngIf="currentTable == 'mr'">
     <h5>MUSCLE RELAXANTS</h5>
     <table class="picuTable">
       <thead>
@@ -220,12 +239,14 @@
 
       </tbody>
     </table>
+  </div>
   <!--table 2 end -->
   <!--Container 3 end  -->
 
 
   <!--container 4 -->
   <!--table3 -->
+  <div *ngIf="currentTable == 'vm'">
     <h5>VASOACTIVE MEDICATION</h5>
     <table class="picuTable">
       <thead>
@@ -410,12 +431,14 @@
         </tr>
       </tbody>
     </table>
+  </div>
   <!--table 3 end -->
   <!--Container 4 end  -->
 
 
   <!--container 5  -->
   <!--table 4  -->
+  <div *ngIf="currentTable == 'am'">
     <h5>Asthma MEDICATION</h5>
     <table class="picuTable">
       <thead>
@@ -523,3 +546,4 @@
         </tr>
       </tbody>
     </table> 
+  </div>

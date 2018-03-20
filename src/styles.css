@@ -72,6 +72,32 @@ input::-moz-focus-inner { border: 0; }
 
 /* end of tabs */
 
+/* subtabs */
+    .subTabs ul{
+        list-style:none;
+        padding-left:0px;
+        display: -webkit-inline-box;
+        border:1px solid darkgray;
+        border-radius: 5px;
+        background:white;
+        position: relative;
+        left:50%;
+        transform: translate(-50%);
+    }
+
+    .subTabs ul li{
+        padding:2px 10px;
+        border-color:darkgray;
+        border-left: 1px solid;
+        cursor: pointer;
+    }
+
+    .subTabs ul .active{
+        background:linear-gradient(#69b2fa,#046dff);
+        color:white;
+    }
+/* end of subtabs */
+
 
 /* style for tab view */
 div[tabs]{
@@ -90,11 +116,28 @@ div[tabs]{
 }
 
 .tabView .main-content{
-    max-height:60vh;
+    /* max-height:60vh; */
     overflow-y: scroll;
 }
 /* end for tab view */
 
+/* TabCols */
+.tabCol ul{
+    list-style:none;
+    padding:0px;
+}
+.tabCol ul li{
+    padding: 10px 5px;
+    margin:3px 0px;
+    transition: 0.3s;
+}
+.tabCol ul .active{
+    padding: 10px 5px;
+    margin:3px 0px;
+    background:#046dff;
+    color:white;
+}
+/* end of tabcols */
 
 /* buttons */
 
@@ -193,9 +236,14 @@ h5{
 /* Sheet */
 .sheet{
     background:white;
+    padding-bottom:20px;
 }
 .sheet h5{
     text-align: center;
+}
+.sheet svg{
+    display: block;
+    margin: auto;
 }
 /* end of sheet */
 
@@ -211,3 +259,76 @@ h5{
 /* end of picu content */
 
 
+
+/* flex */
+.flex{
+    display:flex;
+    transition: 0.3s;
+}
+.flex .left{
+    width:30%;
+    background:white;
+    outline:2px solid lightgray;
+    margin:10px 5px 0 0;
+    padding:20px 0px;
+}
+.flex .right{
+    width:70%;
+}
+/* end of flex */
+
+
+
+/* Print preview */
+@media print{
+    .media{
+        display:none;
+    }
+    .print{
+        display:block !important;
+    }
+    .print table td{
+        border:1px solid gray;
+    }
+    div[tabs] {
+        margin: 0px 0px;
+    }
+    .tabView{
+        padding:20px 0 0 0;
+        margin:0px;
+    }
+    .tabView .tabs li{
+        display:none;
+    }
+    .tabView .tabs .active{
+        display: block;
+        background:black;
+        color:white;
+    }
+    .tabView .main-content{
+        overflow-y: inherit;
+    }
+    .subTabs{
+        display:none;
+    }
+    .flex .left{
+        display:none;
+    }
+    .flex .right{
+        width:100% !important;
+    }
+    .patient-details .print-left{
+        float:left !important;
+    }
+    .patient-details .print-right{
+        float:right !important;
+    }
+    .btnSection{
+        display:none;
+    }
+}
+.print{
+    display:none;
+}
+
+/* end of print */

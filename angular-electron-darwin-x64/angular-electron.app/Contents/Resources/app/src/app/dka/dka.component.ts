@@ -2,7 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
     selector : 'dka',
-    templateUrl : 'dka.component.html'
+    templateUrl : 'dka.component.html',
+    styles:[`.picuTable{
+        width:100%
+    }`]
 })
 export class DkaComponent{
     local;

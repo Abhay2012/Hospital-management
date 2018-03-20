@@ -2,7 +2,10 @@ import { Component } from "@angular/core";
 
 @Component({
     selector : 'fluids',
-    templateUrl : 'fluids.component.html'
+    templateUrl : 'fluids.component.html',
+    styles:[`.picuTable{
+        width:100%
+    }`]
 })
 export class FluidsComponent{
     local;

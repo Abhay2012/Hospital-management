@@ -1,40 +1,41 @@
 
-    <div class="row">
-        <h3>Information</h3>
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-        <div id="details">
-          ETT SIZE : {{data['ETT']['size']}}
+    <div class="patient-details">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-4">
+            <table class="pull-right print-left">
+                <tr>
+                  <td>ETT SIZE:</td>
+                  <td>{{data['ETT']['size']}}</td>
+                </tr>
+                <tr>
+                  <td>ETT ORAL LENGTH:</td>
+                  <td>{{data['ETT']['oral']}}</td>
+                </tr>
+                <tr>
+                    <td>ETT NASAL LENGTH:</td>
+                    <td>{{data['ETT']['nasal']}}</td>
+                  </tr>
+              </table>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-        <div id="details">
-          ETT ORAL LENGTH :{{data['ETT']['oral']}}
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-        <div id="details">
-          ETT NASAL LENGTH : {{data['ETT']['nasal']}}
+        <div class="col-lg-9 col-md-8 col-sm-8">
+              <table class="print-right">
+                <tr>
+                  <td>
+                      SIGN ONLY FOR THOSE DRUGS REQUIRED FOR INTUBATION.
+                  </td>
+                </tr>
+                <tr>
+                    <td>
+                        Repeat doses require a second signature for administration. Ensure that all drugs are diluted as indicated below.
+                    </td>
+                  </tr>
+              </table>
         </div>
       </div>
     </div>
 
 
-<div class="container">
-  <div class="alert alert-warning">
-    <ul>
-      <li>
-        <b> SIGN ONLY FOR THOSE DRUGS REQUIRED FOR INTUBATION.</b>
-      </li>
-      <li>
-        <b>Repeat doses require a second signature for administration. Ensure that all drugs are diluted as indicated below.</b>
-      </li>
-    </ul>
-  </div>
-
-</div>
-
-
-    <table class="picuTable" border='1px'>
+    <table class="picuTable">
       <thead>
         <tr>
           <td>Drug & Presentation </td>
