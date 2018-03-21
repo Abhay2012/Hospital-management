@@ -326,6 +326,10 @@ h5{
     .btnSection{
         display:none;
     }
+    .flex-print{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
 .print{
     display:none;

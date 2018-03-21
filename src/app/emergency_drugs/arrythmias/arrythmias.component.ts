@@ -6,12 +6,11 @@ declare let flowchart: any;
     templateUrl: 'arrythmias.component.html',
     styles: [`
         .sheet{
-            // min-width:62vw;
+            margin-right:3px;
         }
     `]
 })
 export class ArrythmiasComponent implements OnInit {
-    sheetValue:string;
     text = 'Working';
     local;
     data={};
@@ -81,7 +80,6 @@ export class ArrythmiasComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.sheetValue = 'vf';
         this.local = localStorage;
         this.data['dcshock'] = parseInt(this.local.roundWeight)*4;
         this.data['syndcshock0.5'] = parseInt(this.local.roundWeight)*0.5;
@@ -153,11 +151,6 @@ export class ArrythmiasComponent implements OnInit {
  
          let chart2 = flowchart.parse(content2);
          chart2.drawSVG('canvas2', this.config);
-    }
-
-    openSheet(sheet){
-        this.sheetValue = sheet;
-        console.log(this.sheetValue);
     }
 
 }

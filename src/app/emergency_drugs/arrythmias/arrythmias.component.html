@@ -44,31 +44,17 @@
     </div>
 </div>
 </div>
-    
-<div class="flex">
-        <div class="left">
-            <div class="tabCol">
-                <ul>
-                    <li [class.active]="sheetValue=='vf'" (click)="openSheet('vf')">VENTRICULAR FIBRILLATION AND PULSELESS VENTRICULAR TACHYCARDIA</li>
-                    <li [class.active]="sheetValue=='ap'" (click)="openSheet('ap')">ASYSTOLE AND PEA</li>
-                    <li [class.active]="sheetValue=='st'" (click)="openSheet('st')">SUPRAVENTRICULAR TACHYCARDIA</li>
-                </ul>
-            </div>
+<div class="flex flex-print">
+        <div class="sheet">
+            <h5>Ventricular Fibrillation and Pulseless Ventricular Tachycardia</h5>
+                <div id="canvas"></div>
         </div>
-        <div class="right">
-            <div class="sheet" [hidden]="sheetValue=='st' || sheetValue=='ap'">
-                <h5>Ventricular Fibrillation and Pulseless Ventricular Tachycardia</h5>
-                    <div id="canvas"></div>
-            </div>
-            <div class="sheet" [hidden]="sheetValue=='vf' || sheetValue=='st'">
-                    <h5>Asystole and PEA</h5>
-                    <div  id="canvas2"></div>
-            </div>
-            <div class="sheet" [hidden]="sheetValue=='ap' || sheetValue=='vf'">
-                    <h5>Supraventricular Tachycardia</h5>
-                    <div  id="canvas1" ></div>
-            </div>
-            
+        <div class="sheet">
+            <h5>Ventricular Fibrillation and Pulseless Ventricular Tachycardia</h5>
+                <div id="canvas2"></div>
         </div>
-    </div>
-    
+        <div class="sheet">
+            <h5>Ventricular Fibrillation and Pulseless Ventricular Tachycardia</h5>
+                <div id="canvas1"></div>
+        </div>
+</div>
